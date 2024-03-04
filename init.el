@@ -86,6 +86,10 @@
 ;; Setting org-roam folder for inclusion in the agenda
 (setq org-agenda-files (list "~/Documents/Notes/" "~/Documents/Notes/Daily"))
 
+;; Defining TODO keywords
+(setq org-todo-keywords
+  '((sequence "TODO" "NEXT" "WAIT" "DONE")))
+
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 1)
@@ -118,7 +122,7 @@
   (org-roam-capture-templates
       '(("d" "default" entry
          "* %?"
-         :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
+         :target (file+head "%<%Y%m%d%H%M%S>.org"
                             "#+title: %<%Y%m%d%H%M%S>\n")
 	 :unnarrowed t)))
 
