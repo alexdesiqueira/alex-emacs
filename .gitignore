@@ -1,9 +1,11 @@
 auto-save-list
 backup
 bookmarks
+custom.el
 elpa
 eln-cache
 history
+org-roam.db
 places
 recentf
 transient
