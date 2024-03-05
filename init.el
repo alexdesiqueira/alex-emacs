@@ -108,6 +108,9 @@
   :custom
   (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
 
+;; Adding flex (fuzzy, scatter) completion to completion-styles.
+(setq completion-styles '(basic partial-completion emacs22 flex))
+
 ;; Adding org-roam options.
 (use-package org-roam
   :ensure t
