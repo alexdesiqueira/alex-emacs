@@ -63,8 +63,14 @@
 ;; Setting up the custom folder theme
 (setq custom-theme-directory "~/.config/emacs/themes")
 
-;; Loading theme
-(load-theme 'blue-mood)
+;; Install doom-themes
+(use-package doom-themes
+  :config
+  (setq doom-themes-enable-bold t
+	doom-themes-enable-italic nil)
+  (load-theme 'doom-dracula t)
+  (doom-themes-visual-bell-config)
+  (doom-themes-org-config))
 
 ;; Display time and date in the modeline
 (setq display-time-day-and-date t
@@ -84,7 +90,8 @@
       version-control t)
 
 ;; Setting org-roam folder for inclusion in the agenda
-(setq org-agenda-files (list "~/Documents/Notes/" "~/Documents/Notes/Daily"))
+(setq org-agenda-files
+      (list "~/Documents/Notes/" "~/Documents/Notes/Daily"))
 
 ;; Defining TODO keywords
 (setq org-todo-keywords
