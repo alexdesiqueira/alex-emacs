@@ -1,3 +1,5 @@
+(setq package-install-upgrade-built-in t)
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
@@ -68,7 +70,7 @@
   :config
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic nil)
-  (load-theme 'doom-dracula t)
+  (load-theme 'doom-solarized-dark-high-contrast t)
   (doom-themes-visual-bell-config)
   (doom-themes-org-config))
 
