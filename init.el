@@ -65,14 +65,8 @@
 ;; Setting up the custom folder theme
 (setq custom-theme-directory "~/.config/emacs/themes")
 
-;; Install doom-themes
-(use-package doom-themes
-  :config
-  (setq doom-themes-enable-bold t
-	doom-themes-enable-italic nil)
-  (load-theme 'doom-solarized-dark-high-contrast t)
-  (doom-themes-visual-bell-config)
-  (doom-themes-org-config))
+;; Load theme
+(load-theme 'modus-operandi t)
 
 ;; Display time and date in the modeline
 (setq display-time-day-and-date t
