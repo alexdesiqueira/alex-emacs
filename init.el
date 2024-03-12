@@ -87,7 +87,7 @@
 
 ;; Setting org-roam folder for inclusion in the agenda
 (setq org-agenda-files
-      (list "~/Documents/Notes/" "~/Documents/Notes/Daily"))
+      (list "~/Notes/" "~/Notes/Daily"))
 
 ;; Defining TODO keywords
 (setq org-todo-keywords
@@ -119,7 +119,7 @@
   :ensure t
   :custom
   (org-roam-directory
-   (file-truename "~/Documents/Notes/"))
+   (file-truename "~/Notes/"))
   (org-roam-dailies-directory "Daily/")
   (org-roam-mode-sections
       (list #'org-roam-backlinks-section
@@ -158,4 +158,4 @@
   (org-roam-db-autosync-mode))
 
 ;; Working memory opens with Emacs
-(find-file "~/Documents/Notes/Working memory.txt")
+(find-file "~/Notes/Working memory.txt")
