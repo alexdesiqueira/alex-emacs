@@ -66,7 +66,17 @@
 (setq custom-theme-directory "~/.config/emacs/themes")
 
 ;; Load theme
+(require 'modus-themes)
+
+;; Add all your customizations prior to loading the themes
+(setq modus-themes-italic-constructs nil
+      modus-themes-bold-constructs t)
+
+(setq modus-themes-to-toggle
+      '(modus-operandi modus-vivendi-tinted))
+
 (load-theme 'modus-operandi t)
+(load-theme 'modus-vivendi-tinted t)
 
 ;; Display time and date in the modeline
 (setq display-time-day-and-date t
@@ -139,19 +149,18 @@
                             "#+title: %<%Y-%m-%d>\n"))))
 
   :bind
-  (("C-c r b t" . org-roam-buffer-toggle)
-   ("C-c r n f" . org-roam-node-find)
-   ("C-c r g" . org-roam-graph)
-   ("C-c r n i" . org-roam-node-insert)
-   ("C-c r c" . org-roam-capture)
+  (("C-c n b" . org-roam-buffer-toggle)
+   ("C-c n f" . org-roam-node-find)
+   ("C-c n g" . org-roam-graph)
+   ("C-c n i" . org-roam-node-insert)
+   ("C-c n c" . org-roam-capture)
    ;; Dailies
-   ("C-c r d c d" . org-roam-dailies-capture-date)
-   ("C-c r d c t" . org-roam-dailies-capture-today)
-   ("C-c r d c T" . org-roam-dailies-capture-tomorrow)
-   ("C-c r d g d" . org-roam-dailies-goto-date)
-   ("C-c r d g t" . org-roam-dailies-goto-today)
-   ("C-c r d g T" . org-roam-dailies-goto-tomorrow)
-   ("C-c r d g y" . org-roam-dailies-goto-yesterday))
+   ("C-c d c d" . org-roam-dailies-capture-date)
+   ("C-c d c t" . org-roam-dailies-capture-today)
+   ("C-c d c T" . org-roam-dailies-capture-tomorrow)
+   ("C-c d g d" . org-roam-dailies-goto-date)
+   ("C-c d g t" . org-roam-dailies-goto-today)
+   ("C-c d g T" . org-roam-dailies-goto-tomorrow))
 
   :config
   (org-roam-setup)
